@@ -1,0 +1,39 @@
+/* =========================================
+   MERLIN DESIGN TOKENS
+   Single source of truth for UI styling
+========================================= */
+
+:root {
+  /* -------- Spacing -------- */
+  --space-1: 6px;
+  --space-2: 10px;
+  --space-3: 14px;
+  --space-4: 18px;
+  --space-5: 24px;
+
+  /* -------- Radius -------- */
+  --radius-card: 14px;
+
+  /* -------- Typography -------- */
+  --text-sm: 0.95rem;
+  --text-md: 1.05rem;
+  --text-lg: 1.25rem;
+
+  /* -------- Core Colors -------- */
+  --text-main: rgba(255, 255, 255, 0.92);
+  --text-muted: rgba(255, 255, 255, 0.72);
+
+  /* -------- Card Surfaces -------- */
+  --card-bg: rgba(255, 255, 255, 0.08);
+  --card-bg-strong: rgba(255, 255, 255, 0.12);
+  --card-border: rgba(255, 255, 255, 0.14);
+
+  /* -------- Accents (gentle, caregiver-safe) -------- */
+  --accent-info: #7cc6ff;
+  --accent-warn: #ffd38a;
+  --accent-success: #9be8b3;
+
+  /* -------- Effects -------- */
+  --shadow-soft: 0 10px 28px rgba(0, 0, 0, 0.28);
+  --blur-soft: blur(10px);
+}

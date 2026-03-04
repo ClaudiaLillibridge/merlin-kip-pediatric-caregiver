@@ -1,0 +1,423 @@
+
+{
+  "title": "Pediatric Oncology Caregiver Glossary",
+  "items": [
+    {
+      "term": "ANC (Absolute Neutrophil Count)",
+      "category": "Labs/Counts",
+      "plain": "A lab value that estimates how many neutrophils (infection-fighting white blood cells) are in the blood.",
+      "why_it_matters": "Lower ANC means higher infection risk. Your care team may change plans or precautions based on ANC.",
+      "source": "NCI Dictionary of Cancer Terms"
+    },
+    {
+      "term": "Neutrophils",
+      "category": "Labs/Counts",
+      "plain": "A type of white blood cell that helps fight infection.",
+      "why_it_matters": "Neutrophils are key to infection protection. Treatment can lower them, increasing infection risk.",
+      "source": "NCI Dictionary of Cancer Terms"
+    },
+    {
+      "term": "Neutropenia",
+      "category": "Labs/Counts",
+      "plain": "A condition where the blood has fewer neutrophils than normal.",
+      "why_it_matters": "During neutropenia, fever may require urgent guidance. Follow your care team’s fever instructions.",
+      "source": "NCI Dictionary of Cancer Terms"
+    },
+    {
+      "term": "CBC (Complete Blood Count)",
+      "category": "Labs/Counts",
+      "plain": "A blood test that measures red cells, white cells, and platelets.",
+      "why_it_matters": "CBC results help the care team monitor infection risk, bleeding risk, and treatment effects.",
+      "source": "NCI Dictionary of Cancer Terms"
+    },
+    {
+      "term": "WBC (White Blood Cell Count)",
+      "category": "Labs/Counts",
+      "plain": "A measure of white blood cells in the blood.",
+      "why_it_matters": "Low WBC can mean higher infection risk. Your team uses it to guide precautions and timing of treatment.",
+      "source": "NCI Dictionary of Cancer Terms"
+    },
+    {
+      "term": "Hemoglobin",
+      "category": "Labs/Counts",
+      "plain": "A protein in red blood cells that carries oxygen through the body.",
+      "why_it_matters": "Low hemoglobin can cause fatigue, weakness, or shortness of breath and may require transfusion.",
+      "source": "NCI Dictionary of Cancer Terms"
+    },
+    {
+      "term": "Hematocrit",
+      "category": "Labs/Counts",
+      "plain": "The percentage of blood that is made up of red blood cells.",
+      "why_it_matters": "Low hematocrit can signal anemia and may relate to fatigue or weakness.",
+      "source": "NCI Dictionary of Cancer Terms"
+    },
+    {
+      "term": "Platelets",
+      "category": "Labs/Counts",
+      "plain": "Small blood cell fragments that help the body form clots to stop bleeding.",
+      "why_it_matters": "Low platelets increase bruising/bleeding risk and may require a platelet transfusion.",
+      "source": "NCI Dictionary of Cancer Terms"
+    },
+    {
+      "term": "Anemia",
+      "category": "Labs/Counts",
+      "plain": "A condition where the body has fewer red blood cells than normal.",
+      "why_it_matters": "Anemia can cause fatigue and may affect activity tolerance; the team may recommend treatment or transfusion.",
+      "source": "NCI Dictionary of Cancer Terms"
+    },
+    {
+      "term": "Absolute Lymphocyte Count (ALC)",
+      "category": "Labs/Counts",
+      "plain": "A lab value that measures lymphocytes (a type of white blood cell).",
+      "why_it_matters": "Some therapies affect immune function; your team may monitor ALC to understand immune recovery.",
+      "source": "NCI Dictionary of Cancer Terms"
+    },
+
+    {
+      "term": "Central Line",
+      "category": "Lines/Procedures",
+      "plain": "A tube placed into a large vein to give medicines/fluids, draw blood, or give blood products.",
+      "why_it_matters": "It reduces needle sticks but needs careful care to lower infection risk.",
+      "source": "NCI Dictionary of Cancer Terms"
+    },
+    {
+      "term": "Port (Implanted Port / Port-a-cath)",
+      "category": "Lines/Procedures",
+      "plain": "A small device under the skin connected to a catheter that goes into a vein.",
+      "why_it_matters": "Makes long-term treatment easier. Watch for redness, swelling, pain, or fever.",
+      "source": "NCI Dictionary of Cancer Terms"
+    },
+    {
+      "term": "PICC Line",
+      "category": "Lines/Procedures",
+      "plain": "A long IV catheter inserted in the arm and advanced to a large vein near the heart.",
+      "why_it_matters": "Used for longer treatments. Care includes keeping it clean/dry and watching for infection.",
+      "source": "NCI Dictionary of Cancer Terms"
+    },
+    {
+      "term": "Catheter",
+      "category": "Lines/Procedures",
+      "plain": "A thin, flexible tube used to deliver fluids/medicine or remove fluids.",
+      "why_it_matters": "Many treatments use catheters; knowing the type helps you follow care instructions.",
+      "source": "NCI Dictionary of Cancer Terms"
+    },
+    {
+      "term": "IV (Intravenous)",
+      "category": "Lines/Procedures",
+      "plain": "Given into a vein through a needle or catheter.",
+      "why_it_matters": "Many medicines and fluids are given IV; ask about expected side effects and timing.",
+      "source": "NCI Dictionary of Cancer Terms"
+    },
+    {
+      "term": "Lumbar Puncture (Spinal Tap)",
+      "category": "Lines/Procedures",
+      "plain": "A procedure where a needle is placed in the lower back to collect spinal fluid or give medicine.",
+      "why_it_matters": "Used for diagnosis and/or treatment. Your child may need rest afterward.",
+      "source": "NCI Dictionary of Cancer Terms"
+    },
+    {
+      "term": "Bone Marrow Aspiration",
+      "category": "Lines/Procedures",
+      "plain": "A procedure that removes a small amount of liquid bone marrow for testing.",
+      "why_it_matters": "Helps diagnose cancer and check response to treatment.",
+      "source": "NCI Dictionary of Cancer Terms"
+    },
+    {
+      "term": "Bone Marrow Biopsy",
+      "category": "Lines/Procedures",
+      "plain": "A procedure that removes a small piece of bone marrow tissue for testing.",
+      "why_it_matters": "Provides detailed information that can guide diagnosis and treatment plans.",
+      "source": "NCI Dictionary of Cancer Terms"
+    },
+    {
+      "term": "Biopsy",
+      "category": "Lines/Procedures",
+      "plain": "Removal of tissue or cells so they can be examined under a microscope.",
+      "why_it_matters": "Confirms diagnosis and helps guide treatment choices.",
+      "source": "NCI Dictionary of Cancer Terms"
+    },
+    {
+      "term": "Sedation",
+      "category": "Lines/Procedures",
+      "plain": "Medicine that helps a child relax or sleep during a procedure.",
+      "why_it_matters": "There are usually rules about eating/drinking beforehand and monitoring afterward.",
+      "source": "NCI Dictionary of Cancer Terms"
+    },
+    {
+      "term": "Anesthesia",
+      "category": "Lines/Procedures",
+      "plain": "Medicine used to block pain and sometimes cause sleep during procedures or surgery.",
+      "why_it_matters": "Your child may be sleepy afterward; follow instructions about food, activity, and safety.",
+      "source": "NCI Dictionary of Cancer Terms"
+    },
+    {
+      "term": "CT Scan",
+      "category": "Lines/Procedures",
+      "plain": "A scan that uses x-rays and computers to create detailed images inside the body.",
+      "why_it_matters": "Used to monitor tumors and treatment response; may require contrast or stillness.",
+      "source": "NCI Dictionary of Cancer Terms"
+    },
+    {
+      "term": "MRI",
+      "category": "Lines/Procedures",
+      "plain": "A scan that uses magnets and radio waves to create detailed images inside the body.",
+      "why_it_matters": "Often used to evaluate soft tissues; some children need sedation to stay still.",
+      "source": "NCI Dictionary of Cancer Terms"
+    },
+    {
+      "term": "PET Scan",
+      "category": "Lines/Procedures",
+      "plain": "A scan that uses a small amount of radioactive tracer to show activity in tissues.",
+      "why_it_matters": "Can help detect cancer activity and monitor response to treatment.",
+      "source": "NCI Dictionary of Cancer Terms"
+    },
+
+    {
+      "term": "Chemotherapy",
+      "category": "Treatment",
+      "plain": "Treatment that uses drugs to kill cancer cells or stop them from growing.",
+      "why_it_matters": "Can affect healthy cells too, which can cause side effects; your team provides supportive medicines.",
+      "source": "NCI Dictionary of Cancer Terms"
+    },
+    {
+      "term": "Radiation Therapy",
+      "category": "Treatment",
+      "plain": "Treatment that uses high-energy radiation to kill cancer cells or shrink tumors.",
+      "why_it_matters": "Side effects depend on the area treated; the care team will share a specific plan.",
+      "source": "NCI Dictionary of Cancer Terms"
+    },
+    {
+      "term": "Immunotherapy",
+      "category": "Treatment",
+      "plain": "Treatment that helps the immune system fight cancer.",
+      "why_it_matters": "Side effects may differ from chemo; report new symptoms promptly.",
+      "source": "NCI Dictionary of Cancer Terms"
+    },
+    {
+      "term": "Targeted Therapy",
+      "category": "Treatment",
+      "plain": "Drugs that target specific parts of cancer cells to stop them from growing or spreading.",
+      "why_it_matters": "May have a different side effect profile; your team will monitor labs and symptoms.",
+      "source": "NCI Dictionary of Cancer Terms"
+    },
+    {
+      "term": "Stem Cell Transplant (Bone Marrow Transplant)",
+      "category": "Treatment",
+      "plain": "A procedure that replaces damaged bone marrow with healthy stem cells.",
+      "why_it_matters": "Often requires special infection precautions and long-term follow-up.",
+      "source": "NCI Dictionary of Cancer Terms"
+    },
+    {
+      "term": "Transfusion",
+      "category": "Treatment",
+      "plain": "Receiving blood or blood components through a vein.",
+      "why_it_matters": "May be used to treat low hemoglobin or low platelets and reduce symptoms or bleeding risk.",
+      "source": "NCI Dictionary of Cancer Terms"
+    },
+    {
+      "term": "Platelet Transfusion",
+      "category": "Treatment",
+      "plain": "Receiving platelets through an IV to help with clotting.",
+      "why_it_matters": "Helps reduce bleeding risk when platelet counts are low.",
+      "source": "NCI Dictionary of Cancer Terms"
+    },
+    {
+      "term": "Red Blood Cell Transfusion",
+      "category": "Treatment",
+      "plain": "Receiving red blood cells through an IV to improve oxygen delivery.",
+      "why_it_matters": "Can help with fatigue, shortness of breath, and anemia symptoms.",
+      "source": "NCI Dictionary of Cancer Terms"
+    },
+    {
+      "term": "Antibiotics",
+      "category": "Treatment",
+      "plain": "Drugs that treat bacterial infections.",
+      "why_it_matters": "During cancer treatment, infections can become serious quickly; antibiotics may be started promptly.",
+      "source": "NCI Dictionary of Cancer Terms"
+    },
+    {
+      "term": "Antiemetic",
+      "category": "Treatment",
+      "plain": "A medicine used to prevent or reduce nausea and vomiting.",
+      "why_it_matters": "Taking anti-nausea meds as directed can help prevent dehydration and keep nutrition on track.",
+      "source": "NCI Dictionary of Cancer Terms"
+    },
+    {
+      "term": "Steroids (Corticosteroids)",
+      "category": "Treatment",
+      "plain": "Medicines that reduce inflammation and are used in some cancer treatments.",
+      "why_it_matters": "Can affect appetite, mood, sleep, and blood sugar; your team will guide monitoring.",
+      "source": "NCI Dictionary of Cancer Terms"
+    },
+
+    {
+      "term": "Fever",
+      "category": "Symptoms/Side Effects",
+      "plain": "A higher-than-normal body temperature.",
+      "why_it_matters": "During treatment, fever may signal infection and needs prompt guidance from the care team.",
+      "source": "NCI Dictionary of Cancer Terms"
+    },
+    {
+      "term": "Infection",
+      "category": "General",
+      "plain": "When germs enter the body and cause illness.",
+      "why_it_matters": "Cancer treatment can reduce the body’s ability to fight infection; seek guidance early for fever or symptoms.",
+      "source": "NCI Dictionary of Cancer Terms"
+    },
+    {
+      "term": "Nausea",
+      "category": "Symptoms/Side Effects",
+      "plain": "A sick feeling in the stomach that may lead to vomiting.",
+      "why_it_matters": "Common during treatment; medicines and diet strategies can help.",
+      "source": "NCI Dictionary of Cancer Terms"
+    },
+    {
+      "term": "Vomiting",
+      "category": "Symptoms/Side Effects",
+      "plain": "Forcing stomach contents out through the mouth.",
+      "why_it_matters": "Can lead to dehydration; call if vomiting is persistent or your child can’t keep fluids down.",
+      "source": "NCI Dictionary of Cancer Terms"
+    },
+    {
+      "term": "Diarrhea",
+      "category": "Symptoms/Side Effects",
+      "plain": "Loose or watery stools.",
+      "why_it_matters": "Can cause dehydration; your care team may recommend fluids, diet changes, or medicines.",
+      "source": "NCI Dictionary of Cancer Terms"
+    },
+    {
+      "term": "Constipation",
+      "category": "Symptoms/Side Effects",
+      "plain": "Having fewer bowel movements than usual or difficulty passing stool.",
+      "why_it_matters": "Some medicines cause constipation; your team may recommend stool softeners or diet changes.",
+      "source": "NCI Dictionary of Cancer Terms"
+    },
+    {
+      "term": "Mucositis",
+      "category": "Symptoms/Side Effects",
+      "plain": "Inflammation of the lining of the digestive tract, often seen as mouth sores.",
+      "why_it_matters": "May make eating/drinking painful; mouth care plans can help reduce complications.",
+      "source": "NCI Dictionary of Cancer Terms"
+    },
+    {
+      "term": "Mouth Sores (Stomatitis)",
+      "category": "Symptoms/Side Effects",
+      "plain": "Sores or inflammation in the mouth.",
+      "why_it_matters": "Can affect nutrition and hydration; report pain, bleeding, or trouble swallowing.",
+      "source": "NCI Dictionary of Cancer Terms"
+    },
+    {
+      "term": "Fatigue",
+      "category": "Symptoms/Side Effects",
+      "plain": "Extreme tiredness that may not improve with rest.",
+      "why_it_matters": "Very common during treatment; tell the team if it limits daily life or worsens suddenly.",
+      "source": "NCI Dictionary of Cancer Terms"
+    },
+    {
+      "term": "Pain",
+      "category": "Symptoms/Side Effects",
+      "plain": "An uncomfortable feeling that can range from mild to severe.",
+      "why_it_matters": "Pain can often be treated; tracking when/where it happens helps the team choose options.",
+      "source": "NCI Dictionary of Cancer Terms"
+    },
+    {
+      "term": "Neuropathy",
+      "category": "Symptoms/Side Effects",
+      "plain": "Nerve problems that can cause numbness, tingling, or pain (often in hands/feet).",
+      "why_it_matters": "Some therapies can cause neuropathy; report new tingling, weakness, or trouble walking.",
+      "source": "NCI Dictionary of Cancer Terms"
+    },
+    {
+      "term": "Rash",
+      "category": "Symptoms/Side Effects",
+      "plain": "A change in the skin that may look red, bumpy, itchy, or irritated.",
+      "why_it_matters": "Can be a medicine side effect or infection sign; report new or worsening rashes.",
+      "source": "NCI Dictionary of Cancer Terms"
+    },
+    {
+      "term": "Alopecia (Hair Loss)",
+      "category": "Symptoms/Side Effects",
+      "plain": "Hair loss that can happen during cancer treatment.",
+      "why_it_matters": "Often temporary; plan for comfort and scalp care, and ask about timing and regrowth.",
+      "source": "NCI Dictionary of Cancer Terms"
+    },
+    {
+      "term": "Appetite Changes",
+      "category": "Symptoms/Side Effects",
+      "plain": "Eating more or less than usual.",
+      "why_it_matters": "Treatment can change appetite; nutrition support can help maintain strength and healing.",
+      "source": "NCI Dictionary of Cancer Terms"
+    },
+
+    {
+      "term": "Diagnosis",
+      "category": "General",
+      "plain": "The identification of a disease based on signs, symptoms, and tests.",
+      "why_it_matters": "Understanding the diagnosis helps caregivers follow the plan and ask the right questions.",
+      "source": "NCI Dictionary of Cancer Terms"
+    },
+    {
+      "term": "Stage",
+      "category": "General",
+      "plain": "A way to describe how much cancer is in the body and where it is.",
+      "why_it_matters": "Stage helps guide treatment planning; your team can explain what it means for your child.",
+      "source": "NCI Dictionary of Cancer Terms"
+    },
+    {
+      "term": "Remission",
+      "category": "General",
+      "plain": "A decrease or disappearance of signs of cancer.",
+      "why_it_matters": "Remission status helps guide next steps and follow-up monitoring.",
+      "source": "NCI Dictionary of Cancer Terms"
+    },
+    {
+      "term": "Relapse",
+      "category": "General",
+      "plain": "When cancer returns after a period of improvement.",
+      "why_it_matters": "Relapse can change treatment plans; your team will review options and timing.",
+      "source": "NCI Dictionary of Cancer Terms"
+    },
+    {
+      "term": "Tumor",
+      "category": "General",
+      "plain": "An abnormal mass of tissue. Tumors can be benign (not cancer) or malignant (cancer).",
+      "why_it_matters": "The type of tumor affects treatment and follow-up. Ask your team how it applies to your child.",
+      "source": "NCI Dictionary of Cancer Terms"
+    },
+    {
+      "term": "Benign",
+      "category": "General",
+      "plain": "Not cancerous.",
+      "why_it_matters": "Benign tumors may still need treatment depending on location and effects.",
+      "source": "NCI Dictionary of Cancer Terms"
+    },
+    {
+      "term": "Malignant",
+      "category": "General",
+      "plain": "Cancerous; able to invade nearby tissues or spread to other parts of the body.",
+      "why_it_matters": "Malignant diagnoses usually require cancer-directed treatment and careful monitoring.",
+      "source": "NCI Dictionary of Cancer Terms"
+    },
+    {
+      "term": "Metastasis",
+      "category": "General",
+      "plain": "The spread of cancer from where it started to other parts of the body.",
+      "why_it_matters": "Metastasis may affect treatment approach and monitoring.",
+      "source": "NCI Dictionary of Cancer Terms"
+    },
+    {
+      "term": "Oncologist",
+      "category": "General",
+      "plain": "A doctor who specializes in diagnosing and treating cancer.",
+      "why_it_matters": "Your oncology team coordinates the treatment plan and supportive care.",
+      "source": "NCI Dictionary of Cancer Terms"
+    },
+    {
+      "term": "Supportive Care",
+      "category": "General",
+      "plain": "Care that helps manage symptoms and side effects and improves comfort and quality of life.",
+      "why_it_matters": "Supportive care can reduce suffering and keep treatment on track; ask what supports are available.",
+      "source": "NCI Dictionary of Cancer Terms"
+    }
+  ]
+}

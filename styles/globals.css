@@ -1,0 +1,217 @@
+@import "./tokens.css";
+:root{
+  --bg0:#0b1020;
+  --bg1:#121a33;
+  --card:rgba(255,255,255,0.06);
+  --card2:rgba(255,255,255,0.10);
+  --text:#f7f8ff;
+  --muted:rgba(255,255,255,0.72);
+  --border:rgba(255,255,255,0.14);
+  --primary:#6D5EF9;
+  --accent:#35D0BA;
+  --gold:#F6C356;
+  --shadow:0 18px 50px rgba(0,0,0,0.35);
+  --radius:16px;
+}
+
+*{ box-sizing:border-box; }
+html,body{ padding:0; margin:0; }
+
+body{
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+  background:
+    radial-gradient(1200px 600px at 20% 10%, rgba(109,94,249,0.35), transparent 60%),
+    radial-gradient(900px 500px at 85% 15%, rgba(53,208,186,0.25), transparent 55%),
+    linear-gradient(160deg, var(--bg0), var(--bg1));
+  color: var(--text);
+  min-height: 100vh;
+}
+
+a{ color: var(--accent); text-decoration:none; }
+a:hover{ text-decoration:underline; }
+
+input, select, textarea{
+  background: rgba(0,0,0,0.18);
+  border: 1px solid var(--border);
+  color: var(--text);
+  border-radius: 12px;
+  padding: 10px 12px;
+}
+
+button{
+  border-radius: 12px;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,0.10);
+  color: var(--text);
+  cursor: pointer;
+}
+
+button:hover{
+  background: rgba(255,255,255,0.16);
+}
+/* Wand flash animation */
+@keyframes wandFlash {
+  0%   { opacity: 0; transform: scale(0.8); filter: blur(2px); }
+  30%  { opacity: 1; transform: scale(1.05); filter: blur(0px); }
+  100% { opacity: 0; transform: scale(1.2); filter: blur(1px); }
+}
+
+.wand-flash {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  width: 140px;
+  height: 140px;
+  border-radius: 999px;
+  pointer-events: none;
+  z-index: 10000;
+
+  /* “magic glow” look */
+  background: radial-gradient(circle at 30% 30%,
+    rgba(255,255,255,0.95),
+    rgba(120,190,255,0.55) 35%,
+    rgba(160,120,255,0.35) 55%,
+    rgba(0,0,0,0) 70%);
+  opacity: 0;
+}
+
+.wand-flash.animate {
+  animation: wandFlash 420ms ease-out;
+}
+/* =========================================
+   MERLIN CARD SYSTEM
+   Shared UI for Today, Learn, Journal
+========================================= */
+
+.mk-card {
+  position: relative;
+  border-radius: var(--radius-card);
+  border: 1px solid var(--card-border);
+  background: var(--card-bg);
+  box-shadow: var(--shadow-soft);
+  backdrop-filter: var(--blur-soft);
+  overflow: hidden;
+}
+
+/* Variants */
+.mk-card--elevated {
+  background: var(--card-bg-strong);
+}
+
+.mk-card--outline {
+  background: transparent;
+  box-shadow: none;
+}
+
+/* Accent bar (tone indicator) */
+.mk-card__accent {
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 4px;
+  opacity: 0;
+}
+
+.mk-card--tone-info .mk-card__accent {
+  background: var(--accent-info);
+  opacity: 1;
+}
+
+.mk-card--tone-warn .mk-card__accent {
+  background: var(--accent-warn);
+  opacity: 1;
+}
+
+.mk-card--tone-success .mk-card__accent {
+  background: var(--accent-success);
+  opacity: 1;
+}
+
+/* Header */
+.mk-card__header {
+  padding: var(--space-4);
+  padding-bottom: var(--space-2);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--space-3);
+}
+
+.mk-card__title {
+  margin: 0;
+  font-size: var(--text-lg);
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--text-main);
+}
+
+.mk-card__subtitle {
+  margin-top: var(--space-1);
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+/* Body */
+.mk-card__body {
+  padding: var(--space-4);
+  padding-top: var(--space-2);
+  font-size: var(--text-md);
+  color: var(--text-main);
+  line-height: 1.55;
+}
+
+/* Footer */
+.mk-card__footer {
+  padding: var(--space-4);
+  padding-top: var(--space-2);
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+}
+
+/* Layout helpers */
+.mk-card-grid {
+  display: grid;
+  gap: 16px;
+}
+
+@media (min-width: 900px) {
+  .mk-card-grid--2 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.mk-card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Pills / buttons inside cards */
+.mk-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(0, 0, 0, 0.2);
+  color: var(--text-main);
+  text-decoration: none;
+  font-size: var(--text-sm);
+}
+
+.mk-pill:hover {
+  background: rgba(0, 0, 0, 0.32);
+}
+
+/* Bulleted lists inside cards */
+.mk-bullets {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.mk-bullets li {
+  margin-bottom: var(--space-1);
+}
