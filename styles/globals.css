@@ -175,12 +175,24 @@ button:hover{
   display: grid;
   gap: 16px;
 }
+.mk-card-grid--1 {
+  grid-template-columns: 1fr;
+}
 
+@media (min-width: 900px) {
+  .mk-card-grid--3 {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
 @media (min-width: 900px) {
   .mk-card-grid--2 {
     grid-template-columns: 1fr 1fr;
   }
 }
+
+.mk-card-grid--3 {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 
 .mk-card-actions {
   display: flex;

@@ -57,18 +57,18 @@ export function Card({
   );
 }
 
+
 export function CardGrid({
   cols = 1,
   children,
 }: {
-  cols?: 1 | 2;
+  cols?: 1 | 2 | 3;
   children: React.ReactNode;
 }) {
-  return <div className={`mk-card-grid ${cols === 2 ? "mk-card-grid--2" : ""}`}>{children}</div>;
-}
+  const colClass =
+    cols === 3 ? "mk-card-grid--3" : cols === 2 ? "mk-card-grid--2" : "mk-card-grid--1";
 
-export function CardActions({ children }: { children: React.ReactNode }) {
-  return <div className="mk-card-actions">{children}</div>;
+  return <div className={`mk-card-grid ${colClass}`}>{children}</div>;
 }
 
 export function CardBullets({ items }: { items: string[] }) {
