@@ -227,3 +227,35 @@ button:hover{
 .mk-bullets li {
   margin-bottom: var(--space-1);
 }
+/* ----------------------------- */
+/* Mobile Learn page fixes       */
+/* ----------------------------- */
+
+@media (max-width: 600px) {
+  /* Stack card header content instead of squeezing */
+  .mk-card__header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  /* Make right-side actions (buttons/links) drop below text */
+  .mk-card__header > div:last-child {
+    width: 100%;
+  }
+
+  /* Ensure pill / button links don’t overlap text */
+  .mk-pill {
+    display: inline-block;
+    width: fit-content;
+  }
+
+  /* Slightly reduce title size so it fits better */
+  .mk-card__title {
+    font-size: 1rem;
+  }
+
+  .mk-card__subtitle {
+    font-size: 0.85rem;
+  }
+}
