@@ -1,9 +1,41 @@
+
 import pediatricOncologyDiseases from "../content/pediatricOncologyDiseases";
 import Link from "next/link";
 import PageLayout from "../components/layout/PageLayout";
 import { Card, CardGrid, CardBullets } from "../components/ui/Card";
 
+/**
+ * Map the display name (what you show in the list) to the real route you created under:
+ * apps/web/pages/learn/<route>.tsx
+ *
+ * Only items listed here will become clickable.
+ * If a diagnosis is not in this map, it will render as plain text (no broken links).
+ */
+const ROUTES: Record<string, string> = {
+  "Acute Lymphoblastic Leukemia (ALL)": "/learn/acute-lymphoblastic-leukemia",
+  "Acute Myeloid Leukemia (AML)": "/learn/acute-myeloid-leukemia",
+  "Brain and Central Nervous System Tumors": "/learn/brain-and-cns-tumors",
+  Neuroblastoma: "/learn/neuroblastoma",
+
+  // Add these once you create their pages:
+  Ependymoma: "/learn/ependymoma",
+  "Ewing Sarcoma": "/learn/ewing-sarcoma",
+  "Germ Cell Tumors": "/learn/germ-cell-tumors",
+  Hepatoblastoma: "/learn/hepatoblastoma",
+  "Hodgkin Lymphoma": "/learn/hodgkin-lymphoma",
+  Medulloblastoma: "/learn/medulloblastoma",
+  "Non-Hodgkin Lymphoma": "/learn/non-hodgkin-lymphoma",
+  Osteosarcoma: "/learn/osteosarcoma",
+  Retinoblastoma: "/learn/retinoblastoma",
+  Rhabdomyosarcoma: "/learn/rhabdomyosarcoma",
+  "Wilms Tumor (Nephroblastoma)": "/learn/wilms-tumor",
+};
+
 export default function LearnPage() {
+  const sorted = [...pediatricOncologyDiseases].sort((a, b) =>
+    a.localeCompare(b)
+  );
+
   return (
     <PageLayout title="Learn">
       {/* Top-level Learn cards */}
@@ -24,7 +56,9 @@ export default function LearnPage() {
           <div style={{ fontWeight: 600, marginBottom: 6 }}>Featured</div>
           <ul style={{ paddingLeft: 18 }}>
             <li>
-              <Link href="/learn/neuroblastoma">Neuroblastoma</Link>
+              <Link href="/learn/neuroblastoma" style={{ textDecoration: "underline" }}>
+                Neuroblastoma
+              </Link>
             </li>
           </ul>
 
@@ -60,7 +94,7 @@ export default function LearnPage() {
         </Card>
       </CardGrid>
 
-      {/* Clean A–Z diagnoses list */}
+      {/* Clickable A–Z list */}
       <Card
         title="Pediatric oncology diagnoses (A–Z)"
         subtitle="Quick reference list. Detailed pages will expand over time."
@@ -74,16 +108,26 @@ export default function LearnPage() {
               paddingLeft: 18,
             }}
           >
-            {[...pediatricOncologyDiseases]
-              .sort()
-              .map((disease) => (
-                <li
-                  key={disease}
-                  style={{ breakInside: "avoid", marginBottom: 6 }}
-                >
-                  {disease}
+            {sorted.map((name) => {
+              const href = ROUTES[name];
+              return (
+                <li key={name} style={{ breakInside: "avoid", marginBottom: 6 }}>
+                  {href ? (
+                    <Link
+                      href={href}
+                      style={{
+                        textDecoration: "underline",
+                        cursor: "pointer",
+                      }}
+                    >
+                      {name}
+                    </Link>
+                  ) : (
+                    name
+                  )}
                 </li>
-              ))}
+              );
+            })}
           </ul>
         </div>
       </Card>
