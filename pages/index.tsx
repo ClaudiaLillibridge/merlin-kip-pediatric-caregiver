@@ -1,3 +1,4 @@
+import pediatricOncologyDiseases from "../content/pediatricOncologyDiseases";
 
 import { useEffect } from "react";
 import { useRouter } from "next/router";
