@@ -1,8 +1,9 @@
-
+import CareStageSelector from "../components/ui/CareStageSelector";
 import pediatricOncologyDiseases from "../content/pediatricOncologyDiseases";
 import Link from "next/link";
 import PageLayout from "../components/layout/PageLayout";
 import { Card, CardGrid, CardBullets } from "../components/ui/Card";
+import { useCareContext } from "../context/CareContext";
 
 /**
  * Map the display name (what you show in the list) to the real route you created under:
@@ -32,12 +33,41 @@ const ROUTES: Record<string, string> = {
 };
 
 export default function LearnPage() {
-  const sorted = [...pediatricOncologyDiseases].sort((a, b) =>
-    a.localeCompare(b)
-  );
+  const { stage } = useCareContext();
+
+  const sorted = [...pediatricOncologyDiseases].sort((a, b) => a.localeCompare(b));
+
+  // Small but meaningful “buyer signal”: the Learn page responds to care stage.
+  const weeklyBullets =
+    stage === "side-effects"
+      ? [
+          "Side effects to watch for right now",
+          "When to call vs. when to wait",
+          "What to write down for your next visit",
+        ]
+      : stage === "newly-diagnosed"
+      ? [
+          "What the diagnosis means in plain language",
+          "Common terms you’ll hear (CBC, ANC, neutropenia)",
+          "Questions to bring to your next appointment",
+        ]
+      : stage === "discharge"
+      ? [
+          "What to monitor at home this week",
+          "Medication and follow-up reminders",
+          "When to call your care team urgently",
+        ]
+      : [
+          "What the care team may focus on this week",
+          "Common side effects you may notice",
+          "When to call versus when to wait",
+        ];
 
   return (
     <PageLayout title="Learn">
+      {/* ✅ Place the selector HERE (full-width, above the 3-column grid) */}
+      <CareStageSelector />
+
       {/* Top-level Learn cards */}
       <CardGrid cols={3}>
         <Card
@@ -69,16 +99,10 @@ export default function LearnPage() {
 
         <Card
           title="What to expect this week"
-          subtitle="Plain-language overview for active treatment."
+          subtitle="Plain-language overview (adapts to your selection above)."
           tone="info"
         >
-          <CardBullets
-            items={[
-              "What the care team may focus on this week",
-              "Common side effects you may notice",
-              "When to call versus when to wait",
-            ]}
-          />
+          <CardBullets items={weeklyBullets} />
         </Card>
 
         <Card

@@ -4,6 +4,9 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import "../styles/globals.css";
 
+// ✅ NEW: Wrap the app with the CareProvider (context)
+import { CareProvider } from "../context/CareContext";
+
 export default function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
   const [flashKey, setFlashKey] = useState(0);
@@ -14,14 +17,13 @@ export default function MyApp({ Component, pageProps }: AppProps) {
     };
 
     router.events.on("routeChangeStart", onStart);
-
     return () => {
       router.events.off("routeChangeStart", onStart);
     };
   }, [router.events]);
 
   return (
-    <>
+    <CareProvider>
       {/* Flash overlay (replays on every navigation) */}
       <div key={flashKey} className="wand-flash animate" />
 
@@ -45,6 +47,6 @@ export default function MyApp({ Component, pageProps }: AppProps) {
       </div>
 
       <Component {...pageProps} />
-    </>
+    </CareProvider>
   );
 }
