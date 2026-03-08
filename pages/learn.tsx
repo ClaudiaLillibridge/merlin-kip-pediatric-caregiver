@@ -35,7 +35,9 @@ const ROUTES: Record<string, string> = {
 export default function LearnPage() {
   const { stage } = useCareContext();
 
-  const sorted = [...pediatricOncologyDiseases].sort((a, b) => a.localeCompare(b));
+  const sorted = [...pediatricOncologyDiseases].sort((a, b) =>
+    a.localeCompare(b)
+  );
 
   // Small but meaningful “buyer signal”: the Learn page responds to care stage.
   const weeklyBullets =
@@ -65,7 +67,7 @@ export default function LearnPage() {
 
   return (
     <PageLayout title="Learn">
-      {/* ✅ Place the selector HERE (full-width, above the 3-column grid) */}
+      {/* ✅ Care stage selector */}
       <CareStageSelector />
 
       {/* Top-level Learn cards */}
@@ -86,7 +88,10 @@ export default function LearnPage() {
           <div style={{ fontWeight: 600, marginBottom: 6 }}>Featured</div>
           <ul style={{ paddingLeft: 18 }}>
             <li>
-              <Link href="/learn/neuroblastoma" style={{ textDecoration: "underline" }}>
+              <Link
+                href="/learn/neuroblastoma"
+                style={{ textDecoration: "underline" }}
+              >
                 Neuroblastoma
               </Link>
             </li>
@@ -103,6 +108,58 @@ export default function LearnPage() {
           tone="info"
         >
           <CardBullets items={weeklyBullets} />
+
+          {/* ✅ Explicit Learn links */}
+          <div style={{ marginTop: 12 }}>
+            <div style={{ fontWeight: 600, marginBottom: 4 }}>Learn more:</div>
+            <ul style={{ paddingLeft: 18 }}>
+              <li>
+                <Link
+                  href="/learn/what-diagnosis-means"
+                  style={{ textDecoration: "underline" }}
+                >
+                  What the diagnosis means (plain English)
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  href="/learn/tests-this-week"
+                  style={{ textDecoration: "underline" }}
+                >
+                  Tests you may see this week
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  href="/learn/your-care-team"
+                  style={{ textDecoration: "underline" }}
+                >
+                  Who’s who on your care team
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  href="/learn/emotions-this-week"
+                  style={{ textDecoration: "underline" }}
+                >
+                  Emotional reactions are normal
+                </Link>
+              </li>
+
+              {/* ✅ NEW: 5th link added */}
+              <li>
+                <Link
+                  href="/learn/decisions-this-week"
+                  style={{ textDecoration: "underline" }}
+                >
+                  Decisions you may hear about
+                </Link>
+              </li>
+            </ul>
+          </div>
         </Card>
 
         <Card
@@ -159,7 +216,8 @@ export default function LearnPage() {
       {/* Gentle reassurance card */}
       <Card variant="elevated">
         <p style={{ marginTop: 0 }}>
-          You do not need to learn everything at once. Start with what matters today.
+          You do not need to learn everything at once. Start with what matters
+          today.
         </p>
       </Card>
     </PageLayout>
