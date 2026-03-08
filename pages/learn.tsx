@@ -1,3 +1,4 @@
+
 import CareStageSelector from "../components/ui/CareStageSelector";
 import pediatricOncologyDiseases from "../content/pediatricOncologyDiseases";
 import Link from "next/link";
@@ -39,7 +40,6 @@ export default function LearnPage() {
     a.localeCompare(b)
   );
 
-  // Small but meaningful “buyer signal”: the Learn page responds to care stage.
   const weeklyBullets =
     stage === "side-effects"
       ? [
@@ -67,10 +67,8 @@ export default function LearnPage() {
 
   return (
     <PageLayout title="Learn">
-      {/* ✅ Care stage selector */}
       <CareStageSelector />
 
-      {/* Top-level Learn cards */}
       <CardGrid cols={3}>
         <Card
           title="Browse by Diagnosis (A–Z)"
@@ -88,10 +86,7 @@ export default function LearnPage() {
           <div style={{ fontWeight: 600, marginBottom: 6 }}>Featured</div>
           <ul style={{ paddingLeft: 18 }}>
             <li>
-              <Link
-                href="/learn/neuroblastoma"
-                style={{ textDecoration: "underline" }}
-              >
+              <Link href="/learn/neuroblastoma" style={{ textDecoration: "underline" }}>
                 Neuroblastoma
               </Link>
             </li>
@@ -109,53 +104,64 @@ export default function LearnPage() {
         >
           <CardBullets items={weeklyBullets} />
 
-          {/* ✅ Explicit Learn links */}
           <div style={{ marginTop: 12 }}>
             <div style={{ fontWeight: 600, marginBottom: 4 }}>Learn more:</div>
+
+            {/* ✅ New diagnosis section */}
+            <div style={{ fontWeight: 600, marginTop: 8, marginBottom: 4 }}>
+              New diagnosis:
+            </div>
             <ul style={{ paddingLeft: 18 }}>
               <li>
-                <Link
-                  href="/learn/what-diagnosis-means"
-                  style={{ textDecoration: "underline" }}
-                >
+                <Link href="/learn/what-diagnosis-means" style={{ textDecoration: "underline" }}>
                   What the diagnosis means (plain English)
                 </Link>
               </li>
-
               <li>
-                <Link
-                  href="/learn/tests-this-week"
-                  style={{ textDecoration: "underline" }}
-                >
+                <Link href="/learn/tests-this-week" style={{ textDecoration: "underline" }}>
                   Tests you may see this week
                 </Link>
               </li>
-
               <li>
-                <Link
-                  href="/learn/your-care-team"
-                  style={{ textDecoration: "underline" }}
-                >
+                <Link href="/learn/your-care-team" style={{ textDecoration: "underline" }}>
                   Who’s who on your care team
                 </Link>
               </li>
-
               <li>
-                <Link
-                  href="/learn/emotions-this-week"
-                  style={{ textDecoration: "underline" }}
-                >
+                <Link href="/learn/emotions-this-week" style={{ textDecoration: "underline" }}>
                   Emotional reactions are normal
                 </Link>
               </li>
-
-              {/* ✅ NEW: 5th link added */}
               <li>
-                <Link
-                  href="/learn/decisions-this-week"
-                  style={{ textDecoration: "underline" }}
-                >
+                <Link href="/learn/decisions-this-week" style={{ textDecoration: "underline" }}>
                   Decisions you may hear about
+                </Link>
+              </li>
+            </ul>
+
+            {/* ✅ In Active Treatment section */}
+            <div style={{ fontWeight: 600, marginTop: 12, marginBottom: 4 }}>
+              In active treatment:
+            </div>
+            <ul style={{ paddingLeft: 18 }}>
+              <li>
+                <Link href="/learn/in-active-treatment" style={{ textDecoration: "underline" }}>
+                  In Active Treatment (overview)
+                </Link>
+              </li>
+              <li>
+                <Link href="/learn/what-care-team-focuses-on" style={{ textDecoration: "underline" }}>
+                  What the care team may focus on this week
+                </Link>
+              </li>
+              <li>
+                <Link href="/learn/common-side-effects" style={{ textDecoration: "underline" }}>
+                  Common side effects you may notice
+                </Link>
+              </li>
+              <li>
+                <Link href="/learn/when-to-call-versus-wait" style={{ textDecoration: "underline" }}>
+                  When to call versus when to wait
                 </Link>
               </li>
             </ul>
@@ -175,7 +181,6 @@ export default function LearnPage() {
         </Card>
       </CardGrid>
 
-      {/* Clickable A–Z list */}
       <Card
         title="Pediatric oncology diagnoses (A–Z)"
         subtitle="Quick reference list. Detailed pages will expand over time."
@@ -194,13 +199,7 @@ export default function LearnPage() {
               return (
                 <li key={name} style={{ breakInside: "avoid", marginBottom: 6 }}>
                   {href ? (
-                    <Link
-                      href={href}
-                      style={{
-                        textDecoration: "underline",
-                        cursor: "pointer",
-                      }}
-                    >
+                    <Link href={href} style={{ textDecoration: "underline" }}>
                       {name}
                     </Link>
                   ) : (
@@ -213,13 +212,12 @@ export default function LearnPage() {
         </div>
       </Card>
 
-      {/* Gentle reassurance card */}
       <Card variant="elevated">
         <p style={{ marginTop: 0 }}>
-          You do not need to learn everything at once. Start with what matters
-          today.
+          You do not need to learn everything at once. Start with what matters today.
         </p>
       </Card>
     </PageLayout>
   );
 }
+``
