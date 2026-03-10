@@ -1,3 +1,4 @@
+
 import Link from "next/link";
 import PageLayout from "../../components/layout/PageLayout";
 import { Card, CardGrid, CardBullets } from "../../components/ui/Card";
@@ -17,10 +18,11 @@ type DiagnosisTemplateProps = {
 
 /**
  * IMPORTANT:
- * This file lives under /pages, so it MUST have a default export.
- * That is why this component is exported as default.
+ * This file is inside /pages, so Next.js expects a default export.
+ * We ALSO export a named version so existing pages can keep:
+ *   import { DiagnosisTemplate } from "./_diagnosis-template";
  */
-export default function DiagnosisTemplate({
+function DiagnosisTemplate({
   pageTitle,
   diagnosisName,
   subtitle,
@@ -115,3 +117,6 @@ export default function DiagnosisTemplate({
     </PageLayout>
   );
 }
+
+export default DiagnosisTemplate;
+export { DiagnosisTemplate };
