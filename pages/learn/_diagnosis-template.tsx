@@ -1,4 +1,3 @@
-
 import Link from "next/link";
 import PageLayout from "../../components/layout/PageLayout";
 import { Card, CardGrid, CardBullets } from "../../components/ui/Card";
@@ -16,7 +15,12 @@ type DiagnosisTemplateProps = {
   whereNextLinks?: { href: string; label: string }[];
 };
 
-export function DiagnosisTemplate({
+/**
+ * IMPORTANT:
+ * This file lives under /pages, so it MUST have a default export.
+ * That is why this component is exported as default.
+ */
+export default function DiagnosisTemplate({
   pageTitle,
   diagnosisName,
   subtitle,
