@@ -165,6 +165,50 @@ export default function LearnPage() {
                 </Link>
               </li>
             </ul>
+
+            {/* ✅ Managing Side Effects section (NEW) */}
+            <div style={{ fontWeight: 600, marginTop: 12, marginBottom: 4 }}>
+              Managing side effects:
+            </div>
+            <ul style={{ paddingLeft: 18 }}>
+              <li>
+                <Link href="/learn/managing-side-effects" style={{ textDecoration: "underline" }}>
+                  Managing side effects (practical guide)
+                </Link>
+              </li>
+              <li>
+                <Link href="/learn/common-side-effects" style={{ textDecoration: "underline" }}>
+                  Common side effects you may notice
+                </Link>
+              </li>
+              <li>
+                <Link href="/learn/when-to-call-versus-wait" style={{ textDecoration: "underline" }}>
+                  When to call versus when to wait
+                </Link>
+              </li>
+            </ul>
+
+            {/* ✅ Preparing for Discharge section (NEW) */}
+            <div style={{ fontWeight: 600, marginTop: 12, marginBottom: 4 }}>
+              Preparing for discharge:
+            </div>
+            <ul style={{ paddingLeft: 18 }}>
+              <li>
+                <Link href="/learn/preparing-for-discharge" style={{ textDecoration: "underline" }}>
+                  Preparing for discharge (checklist)
+                </Link>
+              </li>
+              <li>
+                <Link href="/learn/when-to-call-versus-wait" style={{ textDecoration: "underline" }}>
+                  When to call versus when to wait
+                </Link>
+              </li>
+              <li>
+                <Link href="/learn/managing-side-effects" style={{ textDecoration: "underline" }}>
+                  Managing side effects at home
+                </Link>
+              </li>
+            </ul>
           </div>
         </Card>
 
@@ -220,4 +264,3 @@ export default function LearnPage() {
     </PageLayout>
   );
 }
-``
