@@ -1,5 +1,5 @@
 
-import { DiagnosisTemplate } from "./_diagnosis-template";
+import DiagnosisTemplate from "../../components/learn/DiagnosisTemplate";
 
 export default function AcuteLymphoblasticLeukemiaPage() {
   return (
