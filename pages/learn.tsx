@@ -36,9 +36,7 @@ const ROUTES: Record<string, string> = {
 export default function LearnPage() {
   const { stage } = useCareContext();
 
-  const sorted = [...pediatricOncologyDiseases].sort((a, b) =>
-    a.localeCompare(b)
-  );
+  const sorted = [...pediatricOncologyDiseases].sort((a, b) => a.localeCompare(b));
 
   const weeklyBullets =
     stage === "side-effects"
@@ -107,10 +105,8 @@ export default function LearnPage() {
           <div style={{ marginTop: 12 }}>
             <div style={{ fontWeight: 600, marginBottom: 4 }}>Learn more:</div>
 
-            {/* New diagnosis */}
-            <div style={{ fontWeight: 600, marginTop: 8, marginBottom: 4 }}>
-              New diagnosis:
-            </div>
+            {/* ✅ New diagnosis section */}
+            <div style={{ fontWeight: 600, marginTop: 8, marginBottom: 4 }}>New diagnosis:</div>
             <ul style={{ paddingLeft: 18 }}>
               <li>
                 <Link href="/learn/what-diagnosis-means" style={{ textDecoration: "underline" }}>
@@ -139,10 +135,8 @@ export default function LearnPage() {
               </li>
             </ul>
 
-            {/* In Active Treatment */}
-            <div style={{ fontWeight: 600, marginTop: 12, marginBottom: 4 }}>
-              In active treatment:
-            </div>
+            {/* ✅ In Active Treatment section */}
+            <div style={{ fontWeight: 600, marginTop: 12, marginBottom: 4 }}>In active treatment:</div>
             <ul style={{ paddingLeft: 18 }}>
               <li>
                 <Link href="/learn/in-active-treatment" style={{ textDecoration: "underline" }}>
@@ -166,10 +160,8 @@ export default function LearnPage() {
               </li>
             </ul>
 
-            {/* Managing Side Effects */}
-            <div style={{ fontWeight: 600, marginTop: 12, marginBottom: 4 }}>
-              Managing side effects:
-            </div>
+            {/* ✅ Managing Side Effects section */}
+            <div style={{ fontWeight: 600, marginTop: 12, marginBottom: 4 }}>Managing side effects:</div>
             <ul style={{ paddingLeft: 18 }}>
               <li>
                 <Link href="/learn/managing-side-effects" style={{ textDecoration: "underline" }}>
@@ -188,10 +180,8 @@ export default function LearnPage() {
               </li>
             </ul>
 
-            {/* ✅ Preparing for Discharge (FINAL, cleaned up) */}
-            <div style={{ fontWeight: 600, marginTop: 12, marginBottom: 4 }}>
-              Preparing for discharge:
-            </div>
+            {/* ✅ Preparing for Discharge section (final, no duplicate page links) */}
+            <div style={{ fontWeight: 600, marginTop: 12, marginBottom: 4 }}>Preparing for discharge:</div>
             <ul style={{ paddingLeft: 18 }}>
               <li>
                 <Link href="/learn/preparing-for-discharge" style={{ textDecoration: "underline" }}>
