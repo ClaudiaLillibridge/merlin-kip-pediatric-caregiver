@@ -2,18 +2,30 @@
 import PageLayout from "../components/layout/PageLayout";
 import { Card } from "../components/ui/Card";
 
+type JournalEntry = {
+  id?: string;
+  title?: string;
+  content?: string;
+};
+
 export default function JournalPage() {
-  const entries: any[] = [];
+  // During Vercel build/prerender there is no runtime data, so default to [].
+  const entries: JournalEntry[] = [];
 
   return (
     <PageLayout title="Journal">
-      <Card title="Journal">
+      <Card title="Your Journal" subtitle="A private place to write things down." variant="elevated">
         {entries.length === 0 ? (
-          <p>No journal entries yet.</p>
+          <p style={{ marginTop: 0, opacity: 0.8 }}>
+            You don’t have any journal entries yet.
+          </p>
         ) : (
-          <ul>
-            {entries.map((e, i) => (
-              <li key={i}>{e}</li>
+          <ul style={{ paddingLeft: 18 }}>
+            {entries.map((e, idx) => (
+              <li key={e.id ?? String(idx)} style={{ marginBottom: 10 }}>
+                <strong>{e.title ?? "Untitled"}</strong>
+                <p style={{ marginTop: 4 }}>{e.content ?? ""}</p>
+              </li>
             ))}
           </ul>
         )}
