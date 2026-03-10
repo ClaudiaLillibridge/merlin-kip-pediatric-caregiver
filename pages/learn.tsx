@@ -107,7 +107,7 @@ export default function LearnPage() {
           <div style={{ marginTop: 12 }}>
             <div style={{ fontWeight: 600, marginBottom: 4 }}>Learn more:</div>
 
-            {/* ✅ New diagnosis section */}
+            {/* New diagnosis */}
             <div style={{ fontWeight: 600, marginTop: 8, marginBottom: 4 }}>
               New diagnosis:
             </div>
@@ -139,7 +139,7 @@ export default function LearnPage() {
               </li>
             </ul>
 
-            {/* ✅ In Active Treatment section */}
+            {/* In Active Treatment */}
             <div style={{ fontWeight: 600, marginTop: 12, marginBottom: 4 }}>
               In active treatment:
             </div>
@@ -166,7 +166,7 @@ export default function LearnPage() {
               </li>
             </ul>
 
-            {/* ✅ Managing Side Effects section (NEW) */}
+            {/* Managing Side Effects */}
             <div style={{ fontWeight: 600, marginTop: 12, marginBottom: 4 }}>
               Managing side effects:
             </div>
@@ -188,24 +188,24 @@ export default function LearnPage() {
               </li>
             </ul>
 
-            {/* ✅ Preparing for Discharge section (NEW) */}
+            {/* ✅ Preparing for Discharge (FINAL, cleaned up) */}
             <div style={{ fontWeight: 600, marginTop: 12, marginBottom: 4 }}>
               Preparing for discharge:
             </div>
             <ul style={{ paddingLeft: 18 }}>
               <li>
                 <Link href="/learn/preparing-for-discharge" style={{ textDecoration: "underline" }}>
-                  Preparing for discharge (checklist)
-                </Link>
-              </li>
-              <li>
-                <Link href="/learn/when-to-call-versus-wait" style={{ textDecoration: "underline" }}>
-                  When to call versus when to wait
+                  What to monitor at home this week
                 </Link>
               </li>
               <li>
                 <Link href="/learn/managing-side-effects" style={{ textDecoration: "underline" }}>
                   Managing side effects at home
+                </Link>
+              </li>
+              <li>
+                <Link href="/learn/when-to-call-versus-wait" style={{ textDecoration: "underline" }}>
+                  When to call your care team urgently
                 </Link>
               </li>
             </ul>

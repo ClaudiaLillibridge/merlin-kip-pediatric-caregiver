@@ -1,58 +1,39 @@
-import Link from "next/link";
-import PageLayout from "../../components/layout/PageLayout";
-import { Card } from "../../components/ui/Card";
+
+import { DiagnosisTemplate } from "./_diagnosis-template";
 
 export default function NeuroblastomaPage() {
   return (
-    <PageLayout title="Neuroblastoma">
-      <p style={{ marginBottom: 12 }}>
-        <Link href="/learn">← Back to Learn</Link>
-      </p>
-
-      <Card variant="elevated">
-        <strong>Important:</strong>
-        <p>
-          This information is for general education only. It does not replace
-          your child’s care team. Every child’s situation is unique. Always ask
-          your oncology team what applies to your child.
-        </p>
-      </Card>
-
-      <Card>
-        <h2>Neuroblastoma in Plain Language</h2>
-        <p>
-          Neuroblastoma is a type of cancer that starts in immature nerve cells.
-          It most often affects babies and young children.
-        </p>
-        <p>
-          It often begins in the abdomen near the adrenal glands, but it can
-          start in other parts of the body.
-        </p>
-      </Card>
-
-      <Card>
-        <h2>Common Signs and Symptoms</h2>
-        <ul>
-          <li>A lump or swelling (often in the belly)</li>
-          <li>Belly pain or discomfort</li>
-          <li>Fatigue or low energy</li>
-          <li>Changes in appetite</li>
-        </ul>
-      </Card>
-
-      <Card>
-        <h2>Questions to Ask the Care Team</h2>
-        <ul>
-          <li>What type of neuroblastoma does my child have?</li>
-          <li>What tests are being used to understand it better?</li>
-          <li>What are the goals of treatment right now?</li>
-          <li>Who should we contact if we have questions?</li>
-        </ul>
-      </Card>
-
-      <p style={{ opacity: 0.7 }}>
-        <strong>Last reviewed:</strong> March 2026
-      </p>
-    </PageLayout>
+    <DiagnosisTemplate
+      pageTitle="Neuroblastoma"
+      diagnosisName="Neuroblastoma"
+      subtitle="A plain-language overview for caregivers (2–3 minute read)."
+      plainEnglish={[
+        "Neuroblastoma is a cancer that starts in certain nerve-related cells.",
+        "It most often begins in the abdomen (near the adrenal glands), but it can start in other areas.",
+        "Symptoms depend on where the tumor is and how it affects the body.",
+        "Treatment plans vary and are tailored carefully by your oncology team.",
+      ]}
+      whatYouMayHear={[
+        "Imaging (CT/MRI): helps see where the tumor is",
+        "Biopsy/pathology: confirms diagnosis and tumor details",
+        "Staging/risk group: helps guide the treatment plan",
+        "Chemotherapy: medicine used to treat cancer cells",
+        "Surgery: may remove tumor when safe",
+        "MIBG scan (sometimes): a specialized scan your team may discuss",
+      ]}
+      whatFamiliesNotice={[
+        "Belly swelling or a firm belly",
+        "Pain or discomfort",
+        "Changes in appetite or energy",
+        "Symptoms related to location (varies)",
+      ]}
+      questionsToAsk={[
+        "Where is the tumor located and what does that mean for symptoms?",
+        "What tests do we need next to guide treatment?",
+        "What is the plan for the next few weeks?",
+        "What side effects should we watch for this week?",
+        "When should we call urgently and who do we call after hours?",
+      ]}
+    />
   );
 }
