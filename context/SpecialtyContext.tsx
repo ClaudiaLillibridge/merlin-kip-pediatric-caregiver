@@ -4,9 +4,9 @@ import React, { createContext, useContext, useMemo, useState } from "react";
 
 export type Specialty = "oncology" | "neurology";
 
-export type SpecialtyContextValue = {
+type SpecialtyContextValue = {
   specialty: Specialty;
-  setSpecialty: React.Dispatch<React.SetStateAction<Specialty>>;
+  setSpecialty: (s: Specialty) => void;
 };
 
 const SpecialtyContext = createContext<SpecialtyContextValue | undefined>(
@@ -14,7 +14,9 @@ const SpecialtyContext = createContext<SpecialtyContextValue | undefined>(
 );
 
 export function SpecialtyProvider({ children }: { children: React.ReactNode }) {
-  const [specialty, setSpecialty] = useState<Specialty>("oncology");
+  const [specialty, setSpecialtyState] = useState<Specialty>("oncology");
+
+  const setSpecialty = (s: Specialty) => setSpecialtyState(s);
 
   const value = useMemo(
     () => ({ specialty, setSpecialty }),

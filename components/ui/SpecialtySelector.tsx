@@ -1,52 +1,55 @@
-
 "use client";
 
 import React from "react";
-import { useSpecialty, type SpecialtyId } from "../../context/SpecialtyContext";
+import { useSpecialty, type Specialty } from "../../context/SpecialtyContext";
 
-export default function SpecialtySelector() {
+type Props = {
+  showDescription?: boolean;
+};
+
+export default function SpecialtySelector({ showDescription = true }: Props) {
   const { specialty, setSpecialty } = useSpecialty();
 
-  const pill = (id: SpecialtyId, label: string) => {
-    const active = specialty === id;
-    return (
-      <button
-        type="button"
-        onClick={() => setSpecialty(id)}
-        style={{
-          border: "1px solid rgba(255,255,255,0.18)",
-          background: active ? "rgba(59,130,246,0.35)" : "rgba(255,255,255,0.08)",
-          color: "white",
-          padding: "8px 12px",
-          borderRadius: "999px",
-          cursor: "pointer",
-          fontSize: "0.85rem",
-          fontWeight: 600,
-        }}
-        aria-pressed={active}
-      >
-        {label}
-      </button>
-    );
-  };
+  const buttonStyle = (isActive: boolean): React.CSSProperties => ({
+    padding: "10px 14px",
+    borderRadius: 20,
+    border: "1px solid rgba(255,255,255,0.30)",
+    background: isActive ? "#1e40af" : "transparent",
+    color: "white",
+    cursor: "pointer",
+    fontWeight: 600,
+  });
+
+  const set = (s: Specialty) => setSpecialty(s);
 
   return (
-    <div
-      style={{
-        display: "flex",
-        alignItems: "center",
-        gap: "10px",
-        padding: "10px 12px",
-        borderRadius: "14px",
-        background: "rgba(255,255,255,0.08)",
-        height: "fit-content",
-      }}
-    >
-      <div style={{ color: "rgba(255,255,255,0.85)", fontSize: "0.85rem" }}>
-        Specialty:
+    <div style={{ marginBottom: 16 }}>
+      <div style={{ display: "flex", gap: 12, alignItems: "center" }}>
+        <button
+          type="button"
+          onClick={() => set("oncology")}
+          style={buttonStyle(specialty === "oncology")}
+        >
+          Oncology
+        </button>
+
+        <button
+          type="button"
+          onClick={() => set("neurology")}
+          style={buttonStyle(specialty === "neurology")}
+        >
+          Neurology
+        </button>
       </div>
-      {pill("oncology", "Oncology")}
-      {pill("neurology", "Neurology")}
+
+      {showDescription && (
+        <div style={{ marginTop: 10, opacity: 0.85 }}>
+          Current focus:{" "}
+          <strong>
+            {specialty === "oncology" ? "Pediatric Oncology" : "Pediatric Neurology"}
+          </strong>
+        </div>
+      )}
     </div>
   );
 }
