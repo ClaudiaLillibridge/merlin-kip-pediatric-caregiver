@@ -1,46 +1,37 @@
-
 "use client";
 
-import React from "react";
+import React, { createContext, useContext, useMemo, useState } from "react";
 
-export type SpecialtyId = "oncology" | "neurology";
+export type Specialty = "oncology" | "neurology";
 
-type SpecialtyContextValue = {
-  specialty: SpecialtyId;
-  setSpecialty: (s: SpecialtyId) => void;
+export type SpecialtyContextValue = {
+  specialty: Specialty;
+  setSpecialty: React.Dispatch<React.SetStateAction<Specialty>>;
 };
 
-const SpecialtyContext = React.createContext<SpecialtyContextValue | null>(null);
-
-const STORAGE_KEY = "merlin.specialty.v1";
+const SpecialtyContext = createContext<SpecialtyContextValue | undefined>(
+  undefined
+);
 
 export function SpecialtyProvider({ children }: { children: React.ReactNode }) {
-  const [specialty, setSpecialtyState] = React.useState<SpecialtyId>("oncology");
+  const [specialty, setSpecialty] = useState<Specialty>("oncology");
 
-  React.useEffect(() => {
-    try {
-      const saved = window.localStorage.getItem(STORAGE_KEY) as SpecialtyId | null;
-      if (saved === "oncology" || saved === "neurology") setSpecialtyState(saved);
-    } catch {}
-  }, []);
-
-  const setSpecialty = (s: SpecialtyId) => {
-    setSpecialtyState(s);
-    try {
-      window.localStorage.setItem(STORAGE_KEY, s);
-    } catch {}
-  };
+  const value = useMemo(
+    () => ({ specialty, setSpecialty }),
+    [specialty]
+  );
 
   return (
-    <SpecialtyContext.Provider value={{ specialty, setSpecialty }}>
+    <SpecialtyContext.Provider value={value}>
       {children}
     </SpecialtyContext.Provider>
   );
 }
 
-export function useSpecialty() {
-  const ctx = React.useContext(SpecialtyContext);
-  if (!ctx) throw new Error("useSpecialty must be used within SpecialtyProvider");
+export function useSpecialty(): SpecialtyContextValue {
+  const ctx = useContext(SpecialtyContext);
+  if (!ctx) {
+    throw new Error("useSpecialty must be used within SpecialtyProvider");
+  }
   return ctx;
 }
-``
