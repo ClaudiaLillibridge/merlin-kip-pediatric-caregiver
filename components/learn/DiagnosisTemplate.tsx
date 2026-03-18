@@ -1,111 +1,143 @@
 
+"use client";
+
+import React from "react";
 import Link from "next/link";
 import PageLayout from "../layout/PageLayout";
 import { Card, CardGrid, CardBullets } from "../ui/Card";
+import { useSpecialty } from "../../context/SpecialtyContext";
 
-export type DiagnosisTemplateProps = {
+type NextStep = { label: string; href: string };
+
+type DiagnosisTemplateProps = {
+  // ✅ matches your existing pages
   pageTitle: string;
-  diagnosisName: string;
-  subtitle: string;
+  diagnosisName?: string;
+  subtitle?: string;
 
-  plainEnglish: string[];
-  whatYouMayHear: string[];
-  whatFamiliesNotice: string[];
-  questionsToAsk: string[];
+  plainEnglish?: string[];
+  whatYouMayHear?: string[];
+  whatFamiliesNotice?: string[];
+  questionsToAsk?: string[];
 
-  whereNextLinks?: { href: string; label: string }[];
+  // ✅ new, optional enhancement (won’t break existing pages)
+  nextSteps?: NextStep[];
 };
 
-export default function DiagnosisTemplate({
-  pageTitle,
-  diagnosisName,
-  subtitle,
-  plainEnglish,
-  whatYouMayHear,
-  whatFamiliesNotice,
-  questionsToAsk,
-  whereNextLinks,
-}: DiagnosisTemplateProps) {
-  const next =
-    whereNextLinks ?? [
-      { href: "/learn/what-diagnosis-means", label: "What the diagnosis means (plain English)" },
-      { href: "/learn/tests-this-week", label: "Tests you may see this week" },
-      { href: "/learn/your-care-team", label: "Who’s who on your care team" },
-      { href: "/learn/managing-side-effects", label: "Managing side effects (practical guide)" },
-      { href: "/learn/when-to-call-versus-wait", label: "When to call versus when to wait" },
-      { href: "/learn", label: "Back to Learn home" },
-    ];
+export default function DiagnosisTemplate(props: DiagnosisTemplateProps) {
+  const { specialty } = useSpecialty();
+
+  const {
+    pageTitle,
+    diagnosisName,
+    subtitle,
+    plainEnglish = [],
+    whatYouMayHear = [],
+    whatFamiliesNotice = [],
+    questionsToAsk = [],
+    nextSteps,
+  } = props;
+
+  // Specialty-aware default "next steps" (used if nextSteps is not provided)
+  const defaultNextSteps: NextStep[] =
+    specialty === "neurology"
+      ? [
+          { label: "Tracking symptoms and seizures", href: "/learn/symptom-tracking" },
+          { label: "Tests and monitoring", href: "/learn/neuro-tests" },
+          { label: "When to call neurology", href: "/learn/when-to-call-neuro" },
+          { label: "Back to Learn", href: "/learn" },
+        ]
+      : [
+          { label: "Tests you may see this week", href: "/learn/tests-this-week" },
+          { label: "Common side effects", href: "/learn/common-side-effects" },
+          { label: "When to call the care team", href: "/learn/when-to-call-versus-wait" },
+          { label: "Back to Learn", href: "/learn" },
+        ];
+
+  const next = nextSteps && nextSteps.length > 0 ? nextSteps : defaultNextSteps;
 
   return (
-    <PageLayout title={pageTitle}>
-      {/* Top nav */}
-      <div style={{ marginBottom: 14 }}>
-        <Link
-          href="/learn"
-          style={{
-            textDecoration: "underline",
-            color: "#fff",
-            fontWeight: 600,
-            fontSize: 14,
-          }}
-        >
+    <PageLayout title="Learn">
+      {/* Back to Learn */}
+      <Card>
+        <Link href="/learn" style={{ fontWeight: 700 }}>
           ← Back to Learn
         </Link>
-      </div>
+      </Card>
 
-      {/* Intro card */}
-      <Card title={diagnosisName} subtitle={subtitle} variant="elevated">
-        <p style={{ marginTop: 0 }}>
-          This page is meant to help you understand the basics in plain language — without the overwhelm.
-          Your care team will explain what applies to your child.
-        </p>
+      {/* Main page header */}
+      <Card tone="info" title={pageTitle} subtitle={subtitle || "Plain-language overview for caregivers (2–3 minute read)."}>
+        {diagnosisName && (
+          <p style={{ marginTop: 0, opacity: 0.85 }}>
+            <strong>Diagnosis:</strong> {diagnosisName}
+          </p>
+        )}
 
-        <p style={{ fontSize: 12, opacity: 0.7, marginTop: 10 }}>
-          Educational only. Always ask your care team what applies to your child.
+        <p style={{ marginTop: 10, opacity: 0.85, fontSize: "0.9rem" }}>
+          Educational support only. This does not replace clinical guidance from your care team.
         </p>
       </Card>
 
+      {/* Content sections */}
       <CardGrid cols={2}>
-        <Card
-          title="What this diagnosis means (plain English)"
-          subtitle="A simple explanation you can re-read anytime."
-          tone="info"
-        >
-          <CardBullets items={plainEnglish} />
-        </Card>
+        {plainEnglish.length > 0 && (
+          <Card
+            title="What it means (plain English)"
+            subtitle="A short explanation in everyday language."
+            tone="info"
+          >
+            <CardBullets items={plainEnglish} />
+          </Card>
+        )}
 
-        <Card title="Words you may hear" subtitle="Common terms — your team will define them for you.">
-          <CardBullets items={whatYouMayHear} />
-        </Card>
+        {whatYouMayHear.length > 0 && (
+          <Card
+            title="What you may hear"
+            subtitle="Common words and phrases you may hear from your care team."
+            tone="info"
+          >
+            <CardBullets items={whatYouMayHear} />
+          </Card>
+        )}
 
-        <Card title="What families may notice" subtitle="A general guide — every child is different.">
-          <CardBullets items={whatFamiliesNotice} />
-          <p style={{ fontSize: 12, opacity: 0.7, marginTop: 10 }}>
-            If something feels urgent or unusual for your child, call your care team.
-          </p>
-        </Card>
+        {whatFamiliesNotice.length > 0 && (
+          <Card
+            title="What families may notice"
+            subtitle="Common signs and symptoms caregivers sometimes observe."
+            tone="warn"
+          >
+            <CardBullets items={whatFamiliesNotice} />
+          </Card>
+        )}
 
-        <Card title="Questions you can ask your team" subtitle="A short list is enough." variant="elevated">
-          <CardBullets items={questionsToAsk} />
-        </Card>
+        {questionsToAsk.length > 0 && (
+          <Card
+            title="Questions to ask"
+            subtitle="Helpful questions you can bring to your next visit."
+            tone="info"
+          >
+            <CardBullets items={questionsToAsk} />
+          </Card>
+        )}
       </CardGrid>
 
-      {/* Where next */}
-      <Card title="Where you can go next" subtitle="Pick one — small steps count.">
-        <ul style={{ paddingLeft: 18, margin: 0 }}>
-          {next.map((item) => (
-            <li key={`${item.href}-${item.label}`} style={{ marginBottom: 6 }}>
-              <Link href={item.href} style={{ textDecoration: "underline" }}>
-                {item.label}
+      {/* Where to go next */}
+      <Card title="Where you can go next" subtitle="You don’t have to read everything at once.">
+        <CardGrid cols={2}>
+          {next.map((n) => (
+            <Card key={n.href} title={n.label}>
+              <Link href={n.href} style={{ fontWeight: 700 }}>
+                Open
               </Link>
-            </li>
+            </Card>
           ))}
-        </ul>
+        </CardGrid>
       </Card>
 
-      <Card variant="elevated">
+      {/* Gentle close */}
+      <Card>
         <p style={{ marginTop: 0 }}>
-          You do not need to learn everything at once. Start with what matters today.
+          If anything feels confusing or overwhelming, that’s normal. It’s okay to pause and come back later.
         </p>
       </Card>
     </PageLayout>
