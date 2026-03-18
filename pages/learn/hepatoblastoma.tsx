@@ -1,39 +1,37 @@
-
-import { DiagnosisTemplate } from "./_diagnosis-template";
+import DiagnosisTemplate from "../../components/learn/DiagnosisTemplate";
 
 export default function HepatoblastomaPage() {
   return (
     <DiagnosisTemplate
       pageTitle="Hepatoblastoma"
       diagnosisName="Hepatoblastoma"
-      subtitle="A plain-language overview for caregivers (2–3 minute read)."
+      subtitle="A rare childhood cancer that starts in the liver"
       plainEnglish={[
-        "Hepatoblastoma is a type of liver tumor most often seen in young children.",
-        "It begins in liver cells and can form a mass in the abdomen.",
-        "Treatment plans often combine medicine and surgery, guided by imaging and lab tests.",
-        "Your team will explain what is planned and why.",
+        "Hepatoblastoma is a type of cancer that begins in the liver.",
+        "It most often affects infants and very young children, usually under the age of three.",
+        "The liver plays an important role in digestion, filtering the blood, and storing energy.",
+        "With coordinated treatment, many children with hepatoblastoma can have very good outcomes.",
       ]}
       whatYouMayHear={[
-        "AFP: a blood test that can help track some liver tumors",
-        "Ultrasound/CT/MRI: imaging of the liver",
-        "Biopsy: confirms diagnosis (sometimes done before treatment)",
-        "Chemotherapy: may shrink the tumor before surgery",
-        "Surgery: removes the tumor when safe",
-        "Follow-up labs/scans: track response over time",
+        "Liver tumor",
+        "Imaging scans (ultrasound, CT, MRI)",
+        "Alpha‑fetoprotein (AFP)",
+        "Chemotherapy",
+        "Surgery",
       ]}
       whatFamiliesNotice={[
-        "A firm belly or belly swelling",
-        "Abdominal pain or discomfort",
-        "Decreased appetite",
-        "Tiredness or low energy",
-        "Sometimes jaundice (yellowing of skin/eyes)",
+        "Swelling or a firm mass in the abdomen",
+        "Abdominal discomfort or pain",
+        "Poor appetite or weight loss",
+        "Nausea or vomiting",
+        "Fatigue or irritability",
       ]}
       questionsToAsk={[
-        "What tests are guiding our plan (imaging, AFP, pathology)?",
-        "What is the treatment sequence (chemo first, surgery later)?",
-        "What side effects should we watch for this week?",
-        "When should we call urgently?",
-        "How will we track progress over time?",
+        "How large is the tumor and where is it located in the liver?",
+        "What tests were used to confirm the diagnosis?",
+        "What treatments are recommended and in what order?",
+        "Will surgery be needed, and what does recovery look like?",
+        "Who should we contact if symptoms change or worsen?",
       ]}
     />
   );

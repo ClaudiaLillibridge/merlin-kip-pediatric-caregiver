@@ -1,39 +1,37 @@
-
-import { DiagnosisTemplate } from "./_diagnosis-template";
+import DiagnosisTemplate from "../../components/learn/DiagnosisTemplate";
 
 export default function OsteosarcomaPage() {
   return (
     <DiagnosisTemplate
       pageTitle="Osteosarcoma"
       diagnosisName="Osteosarcoma"
-      subtitle="A plain-language overview for caregivers (2–3 minute read)."
+      subtitle="A cancer that starts in the bones"
       plainEnglish={[
-        "Osteosarcoma is a cancer that starts in bone.",
-        "It often affects long bones (like around the knee), especially in growing children/teens.",
-        "Treatment usually includes medicine and surgery, tailored to the tumor location.",
-        "Your team will explain the plan and the timeline step by step.",
+        "Osteosarcoma is a type of cancer that begins in the bone.",
+        "It most often develops in areas where bones are growing quickly, such as around the knee, upper arm, or pelvis.",
+        "Osteosarcoma is more commonly diagnosed in children and teenagers.",
+        "With current treatment approaches, many children with osteosarcoma can be treated successfully.",
       ]}
       whatYouMayHear={[
-        "Biopsy: confirms diagnosis",
-        "MRI/CT: imaging to define the tumor",
-        "Chemotherapy: often given before and after surgery",
-        "Surgery: removes the tumor when safe",
-        "Limb-sparing surgery: surgery that aims to preserve the limb (when possible)",
-        "Physical therapy/rehab: helps strength and mobility after treatment",
+        "Bone tumor",
+        "Imaging scans (X‑ray, MRI, CT)",
+        "Biopsy",
+        "Chemotherapy",
+        "Surgery",
       ]}
       whatFamiliesNotice={[
-        "Bone pain that doesn’t improve",
-        "Swelling or a lump",
-        "Trouble using an arm/leg normally",
-        "Pain that gets worse with activity or at night",
-        "Fatigue (sometimes)",
+        "Bone pain that may worsen over time",
+        "Swelling or a lump near a bone or joint",
+        "Limping or difficulty using an arm or leg",
+        "Pain that is worse at night or with activity",
+        "Occasional fractures after minor injury",
       ]}
       questionsToAsk={[
-        "What is the treatment sequence and timeline?",
-        "What kind of surgery is expected and what is recovery like?",
-        "What side effects should we watch for this week?",
-        "What symptoms mean ‘call urgently’?",
-        "What support is available for mobility/school?",
+        "Which bone is affected?",
+        "What tests were used to confirm the diagnosis?",
+        "What treatment steps are recommended and in what order?",
+        "Will surgery be needed, and what does recovery look like?",
+        "Who should we contact if pain or swelling suddenly worsens?",
       ]}
     />
   );

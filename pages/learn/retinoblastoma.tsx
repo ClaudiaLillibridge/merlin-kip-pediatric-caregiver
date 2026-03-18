@@ -1,38 +1,37 @@
-
-import { DiagnosisTemplate } from "./_diagnosis-template";
+import DiagnosisTemplate from "../../components/learn/DiagnosisTemplate";
 
 export default function RetinoblastomaPage() {
   return (
     <DiagnosisTemplate
       pageTitle="Retinoblastoma"
       diagnosisName="Retinoblastoma"
-      subtitle="A plain-language overview for caregivers (2–3 minute read)."
+      subtitle="A childhood cancer that affects the eye"
       plainEnglish={[
-        "Retinoblastoma is a cancer that starts in the retina (the light-sensing layer of the eye).",
-        "It is most often diagnosed in young children.",
-        "Treatment depends on whether one or both eyes are involved and how the eye is affected.",
-        "Your team will focus on safety, vision, and long-term support.",
+        "Retinoblastoma is a type of cancer that starts in the retina, the light‑sensitive layer at the back of the eye.",
+        "It most often affects infants and young children.",
+        "Retinoblastoma can involve one eye or both eyes.",
+        "With early diagnosis and treatment, many children with retinoblastoma have very good outcomes.",
       ]}
       whatYouMayHear={[
-        "Eye exam under anesthesia (EUA): detailed eye exam while asleep",
-        "Imaging: helps understand the eye and surrounding area",
-        "Genetics: sometimes testing is recommended to guide care",
-        "Local therapies: treatments directed at the eye (when appropriate)",
-        "Chemotherapy: may be used depending on the plan",
-        "Vision support services: help over time",
+        "Retina",
+        "Eye exam under anesthesia",
+        "Genetic testing",
+        "Tumor size and location",
+        "Eye‑preserving treatment",
       ]}
       whatFamiliesNotice={[
-        "A white glow in the pupil in photos (sometimes called “white reflex”)",
-        "Eye turning inward or outward",
-        "Redness or swelling (sometimes)",
-        "Vision changes (hard to detect in very young children)",
+        "A white glow or reflection in the pupil (often seen in photos)",
+        "Eyes that appear misaligned or crossed",
+        "Redness or swelling of the eye",
+        "Vision problems or poor tracking",
+        "Pain or irritation in the eye (less common)",
       ]}
       questionsToAsk={[
         "Is one eye or both eyes affected?",
-        "What is our treatment plan and goals (safety, vision)?",
-        "Do we need genetic testing or counseling?",
-        "What should we watch for at home?",
-        "Who do we call after hours with urgent concerns?",
+        "What tests were used to make the diagnosis?",
+        "What treatment options are recommended and why?",
+        "Will treatment affect my child’s vision?",
+        "Should other family members be tested or screened?",
       ]}
     />
   );

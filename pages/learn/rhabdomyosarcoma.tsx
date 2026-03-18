@@ -1,38 +1,37 @@
-
-import { DiagnosisTemplate } from "./_diagnosis-template";
+import DiagnosisTemplate from "../../components/learn/DiagnosisTemplate";
 
 export default function RhabdomyosarcomaPage() {
   return (
     <DiagnosisTemplate
       pageTitle="Rhabdomyosarcoma"
       diagnosisName="Rhabdomyosarcoma"
-      subtitle="A plain-language overview for caregivers (2–3 minute read)."
+      subtitle="A cancer that develops from muscle tissue"
       plainEnglish={[
-        "Rhabdomyosarcoma is a cancer that starts in soft tissue (often related to muscle-type cells).",
-        "It can occur in different parts of the body, so symptoms depend on location.",
-        "Treatment often combines therapies (medicine, surgery, and/or radiation).",
-        "Your team will tailor the plan based on tumor location and test results.",
+        "Rhabdomyosarcoma is a type of cancer that starts in cells that normally develop into skeletal muscle.",
+        "Skeletal muscles help the body move and are found throughout the body.",
+        "Because muscle tissue exists in many places, rhabdomyosarcoma can occur in different parts of the body.",
+        "This cancer most often affects children and adolescents.",
       ]}
       whatYouMayHear={[
-        "Biopsy: confirms diagnosis",
-        "Imaging (MRI/CT/PET): helps define location and spread",
-        "Chemotherapy: common part of treatment",
-        "Surgery: may remove the tumor when safe",
-        "Radiation therapy: may be used depending on location",
-        "Rehab/support services: helps function and recovery",
+        "Soft tissue tumor",
+        "Muscle cells",
+        "Tumor location",
+        "Imaging scans",
+        "Biopsy",
       ]}
       whatFamiliesNotice={[
-        "A lump or swelling",
-        "Pain or pressure symptoms",
-        "Trouble using a body part normally",
-        "Symptoms related to tumor location (varies widely)",
+        "A lump or swelling that may or may not be painful",
+        "Swelling around the eyes, head, or neck",
+        "Difficulty with urination or bowel movements (depending on location)",
+        "Pain or discomfort in the affected area",
+        "Fatigue or decreased activity",
       ]}
       questionsToAsk={[
-        "Where is the tumor and how does location affect treatment?",
-        "What is the treatment sequence and timeline?",
-        "What side effects should we watch for this week?",
-        "What symptoms should prompt an urgent call?",
-        "Who do we contact after hours?",
+        "Where is the tumor located?",
+        "What type of rhabdomyosarcoma does my child have?",
+        "What tests were used to make the diagnosis?",
+        "What treatment options are recommended?",
+        "Who should we contact if symptoms change or worsen?",
       ]}
     />
   );

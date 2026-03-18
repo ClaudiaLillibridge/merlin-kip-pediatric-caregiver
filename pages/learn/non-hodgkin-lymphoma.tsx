@@ -1,39 +1,37 @@
-
-import { DiagnosisTemplate } from "./_diagnosis-template";
+import DiagnosisTemplate from "../../components/learn/DiagnosisTemplate";
 
 export default function NonHodgkinLymphomaPage() {
   return (
     <DiagnosisTemplate
-      pageTitle="Non-Hodgkin Lymphoma"
-      diagnosisName="Non-Hodgkin Lymphoma"
-      subtitle="A plain-language overview for caregivers (2–3 minute read)."
+      pageTitle="Non‑Hodgkin Lymphoma"
+      diagnosisName="Non‑Hodgkin Lymphoma"
+      subtitle="A group of cancers that affect the lymphatic system"
       plainEnglish={[
-        "Non-Hodgkin lymphoma is a cancer of the lymphatic system (immune system).",
-        "There are different subtypes — the subtype helps guide treatment.",
-        "It can involve lymph nodes or other parts of the body.",
-        "Your team will explain the exact type and the treatment plan.",
+        "Non‑Hodgkin Lymphoma is a type of cancer that begins in the lymphatic system, which helps the body fight infection.",
+        "It occurs when certain white blood cells, called lymphocytes, grow and divide in an uncontrolled way.",
+        "There are several different types of Non‑Hodgkin Lymphoma, and they can behave differently from one another.",
+        "In children, Non‑Hodgkin Lymphoma often grows quickly but can respond very well to treatment.",
       ]}
       whatYouMayHear={[
-        "Subtype: the specific kind of non-Hodgkin lymphoma",
-        "Biopsy: confirms diagnosis and subtype",
-        "CT/PET scans: imaging that helps guide treatment",
-        "Staging: shows where disease is present",
-        "Chemotherapy: main treatment",
-        "Central line/port: helps give treatment and draw labs",
+        "Lymph nodes",
+        "Lymphocytes",
+        "Biopsy",
+        "Subtype",
+        "Staging scans",
       ]}
       whatFamiliesNotice={[
-        "Swollen lymph nodes",
-        "Belly swelling/pain or fullness (depending on location)",
-        "Cough or breathing symptoms (if in chest)",
-        "Fatigue",
-        "Fevers (sometimes)",
+        "Swollen lymph nodes that do not go away",
+        "Abdominal swelling or pain",
+        "Shortness of breath or cough",
+        "Fever or night sweats",
+        "Fatigue or decreased energy",
       ]}
       questionsToAsk={[
-        "What subtype is it and how does that guide treatment?",
-        "What tests are needed before treatment starts?",
-        "What side effects should we watch for this week?",
-        "What symptoms mean ‘call urgently’?",
-        "Who do we contact after hours?",
+        "What type of Non‑Hodgkin Lymphoma does my child have?",
+        "Where in the body is the lymphoma located?",
+        "What tests were used to determine the stage?",
+        "What treatments are recommended for this subtype?",
+        "Who should we call if symptoms change or worsen?",
       ]}
     />
   );

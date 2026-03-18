@@ -1,39 +1,37 @@
-
-import { DiagnosisTemplate } from "./_diagnosis-template";
+import DiagnosisTemplate from "../../components/learn/DiagnosisTemplate";
 
 export default function MedulloblastomaPage() {
   return (
     <DiagnosisTemplate
       pageTitle="Medulloblastoma"
       diagnosisName="Medulloblastoma"
-      subtitle="A plain-language overview for caregivers (2–3 minute read)."
+      subtitle="A type of childhood brain tumor"
       plainEnglish={[
-        "Medulloblastoma is a type of brain tumor, often found in the back part of the brain (cerebellum).",
-        "It can affect balance and coordination and may cause symptoms from pressure in the brain.",
-        "Treatment plans often involve multiple steps guided by imaging and tumor testing.",
-        "Your team will explain what comes first and what to expect.",
+        "Medulloblastoma is a type of brain tumor that usually starts in the lower back part of the brain, called the cerebellum.",
+        "The cerebellum helps control balance, coordination, and some movement.",
+        "Medulloblastoma most often affects children, but it can occur at any age.",
+        "Because it is located in the brain, symptoms may appear quickly and often require prompt evaluation.",
       ]}
       whatYouMayHear={[
-        "MRI: imaging used to see the tumor and plan next steps",
-        "Neurosurgery: surgery to remove tumor and relieve pressure",
-        "Biopsy/pathology: confirms tumor type and important details",
-        "Radiation therapy: may be part of treatment for some patients",
-        "Chemotherapy: medicines to treat tumor cells",
-        "Rehab/support services: help with balance, strength, and school planning",
+        "Cerebellum",
+        "Brain imaging (MRI or CT scan)",
+        "Hydrocephalus",
+        "Surgery",
+        "Radiation therapy",
       ]}
       whatFamiliesNotice={[
-        "Headaches, nausea/vomiting (often from pressure)",
-        "Balance or coordination changes",
-        "Walking changes",
-        "Fatigue or irritability",
-        "Vision changes (sometimes)",
+        "Headaches, especially in the morning",
+        "Nausea or vomiting",
+        "Problems with balance or walking",
+        "Clumsiness or coordination changes",
+        "Behavior or mood changes",
       ]}
       questionsToAsk={[
-        "What is the plan for surgery and recovery?",
-        "What tests guide the next step (imaging, pathology results)?",
-        "What symptoms should we call about urgently?",
-        "What support will help with walking/balance/school?",
-        "Who do we contact after hours?",
+        "Where exactly is the tumor located in the brain?",
+        "What tests were used to make the diagnosis?",
+        "What treatments are recommended and in what order?",
+        "Will treatment affect learning or development?",
+        "Who should we contact if symptoms suddenly worsen?",
       ]}
     />
   );

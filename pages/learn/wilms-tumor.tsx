@@ -1,39 +1,37 @@
-
-import { DiagnosisTemplate } from "./_diagnosis-template";
+import DiagnosisTemplate from "../../components/learn/DiagnosisTemplate";
 
 export default function WilmsTumorPage() {
   return (
     <DiagnosisTemplate
-      pageTitle="Wilms Tumor (Nephroblastoma)"
-      diagnosisName="Wilms Tumor (Nephroblastoma)"
-      subtitle="A plain-language overview for caregivers (2–3 minute read)."
+      pageTitle="Wilms Tumor"
+      diagnosisName="Wilms Tumor"
+      subtitle="A childhood kidney cancer"
       plainEnglish={[
-        "Wilms tumor is a type of kidney tumor that occurs in children.",
-        "It often shows up as a belly mass or belly swelling.",
-        "Treatment plans are based on imaging, surgery decisions, and tumor testing.",
-        "Your team will explain the plan and what the next steps are.",
+        "Wilms tumor is a type of cancer that starts in the kidneys.",
+        "It is one of the most common kidney cancers in children and usually affects young children.",
+        "Wilms tumor often grows as a single mass in one kidney, though it can sometimes affect both kidneys.",
+        "With modern treatment approaches, many children with Wilms tumor have very good outcomes.",
       ]}
       whatYouMayHear={[
-        "Ultrasound/CT/MRI: imaging used to look at the kidney and abdomen",
-        "Surgery: may remove the tumor/kidney depending on the plan",
-        "Pathology: testing that provides important details after surgery/biopsy",
-        "Staging: helps guide treatment intensity",
-        "Chemotherapy: commonly used as part of treatment",
-        "Blood pressure monitoring: kidneys affect blood pressure",
+        "Kidney or renal tumor",
+        "Imaging scans",
+        "Surgery",
+        "Chemotherapy",
+        "Tumor stage",
       ]}
       whatFamiliesNotice={[
-        "Belly swelling or a firm belly",
-        "Abdominal pain (sometimes)",
-        "Blood in the urine (sometimes)",
-        "Decreased appetite",
-        "High blood pressure (sometimes, found on exam)",
+        "Swelling or a firm mass in the abdomen",
+        "Abdominal pain",
+        "Blood in the urine",
+        "Fever or fatigue",
+        "Loss of appetite",
       ]}
       questionsToAsk={[
-        "What is the plan for imaging and surgery (if needed)?",
-        "What does staging mean for our child’s treatment?",
-        "What side effects should we watch for this week?",
-        "When should we call urgently?",
-        "How will we monitor kidney function and blood pressure over time?",
+        "Is the tumor affecting one or both kidneys?",
+        "What tests were used to determine the stage?",
+        "What treatments are recommended and why?",
+        "Will surgery be needed, and when?",
+        "Who should we contact if symptoms change?",
       ]}
     />
   );

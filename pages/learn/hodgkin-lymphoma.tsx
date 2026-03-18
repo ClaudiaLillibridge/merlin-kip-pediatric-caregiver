@@ -1,39 +1,37 @@
-
-import { DiagnosisTemplate } from "./_diagnosis-template";
+import DiagnosisTemplate from "../../components/learn/DiagnosisTemplate";
 
 export default function HodgkinLymphomaPage() {
   return (
     <DiagnosisTemplate
       pageTitle="Hodgkin Lymphoma"
       diagnosisName="Hodgkin Lymphoma"
-      subtitle="A plain-language overview for caregivers (2–3 minute read)."
+      subtitle="A cancer of the lymphatic system"
       plainEnglish={[
-        "Hodgkin lymphoma is a cancer of the lymphatic system (part of the immune system).",
-        "It often starts in lymph nodes and can cause swelling in the neck, chest, or other areas.",
-        "Treatment is planned based on where it is and how the body is affected.",
-        "Your team will walk you through the stage and the plan step by step.",
+        "Hodgkin Lymphoma is a type of cancer that starts in the lymphatic system, which is part of the body’s immune system.",
+        "It occurs when certain white blood cells, called lymphocytes, begin to grow abnormally.",
+        "These abnormal cells can collect in lymph nodes and other parts of the body.",
+        "Hodgkin Lymphoma is less common in young children and is more often diagnosed in adolescents and young adults.",
       ]}
       whatYouMayHear={[
-        "Lymph nodes: small glands that help fight infection",
-        "Biopsy: confirms the diagnosis",
-        "Imaging (CT/PET): helps see where disease is present",
-        "Staging: helps guide treatment intensity",
-        "Chemotherapy: main treatment",
-        "Radiation therapy: sometimes used depending on the plan",
+        "Lymph nodes",
+        "Lymphatic system",
+        "Biopsy",
+        "Staging",
+        "Chemotherapy",
       ]}
       whatFamiliesNotice={[
-        "Swollen lymph nodes (often painless)",
-        "Cough or chest symptoms if nodes are in the chest",
-        "Fatigue",
-        "Fever or night sweats (sometimes)",
-        "Itching or weight changes (sometimes)",
+        "Swollen lymph nodes in the neck, chest, or underarms",
+        "Fatigue or low energy",
+        "Fever or night sweats",
+        "Unexplained weight loss",
+        "Itching or skin discomfort",
       ]}
       questionsToAsk={[
-        "What stage is it and what does that mean for our plan?",
-        "What tests are needed before treatment starts?",
-        "What side effects should we expect this week?",
-        "What symptoms should prompt an urgent call?",
-        "Who do we contact after hours?",
+        "Which lymph nodes are involved?",
+        "What tests were used to determine the stage?",
+        "What treatments are recommended and why?",
+        "What side effects should we expect during treatment?",
+        "Who should we contact if symptoms worsen?",
       ]}
     />
   );

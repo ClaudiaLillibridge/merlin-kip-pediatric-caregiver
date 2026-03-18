@@ -1,38 +1,37 @@
-
-import { DiagnosisTemplate } from "./_diagnosis-template";
+import DiagnosisTemplate from "../../components/learn/DiagnosisTemplate";
 
 export default function NeuroblastomaPage() {
   return (
     <DiagnosisTemplate
       pageTitle="Neuroblastoma"
       diagnosisName="Neuroblastoma"
-      subtitle="A plain-language overview for caregivers (2–3 minute read)."
+      subtitle="A childhood cancer that develops from nerve tissue"
       plainEnglish={[
-        "Neuroblastoma is a cancer that starts in certain nerve-related cells.",
-        "It most often begins in the abdomen (near the adrenal glands), but it can start in other areas.",
-        "Symptoms depend on where the tumor is and how it affects the body.",
-        "Treatment plans vary and are tailored carefully by your oncology team.",
+        "Neuroblastoma is a cancer that starts in immature nerve cells.",
+        "It most often develops in the adrenal glands, which sit on top of the kidneys, but it can also grow in the chest, abdomen, or spine.",
+        "Neuroblastoma mainly affects infants and young children.",
+        "The behavior of neuroblastoma can vary widely, from slow‑growing tumors to more aggressive disease.",
       ]}
       whatYouMayHear={[
-        "Imaging (CT/MRI): helps see where the tumor is",
-        "Biopsy/pathology: confirms diagnosis and tumor details",
-        "Staging/risk group: helps guide the treatment plan",
-        "Chemotherapy: medicine used to treat cancer cells",
-        "Surgery: may remove tumor when safe",
-        "MIBG scan (sometimes): a specialized scan your team may discuss",
+        "Adrenal glands",
+        "Sympathetic nervous system",
+        "Tumor staging",
+        "Risk group",
+        "Imaging scans",
       ]}
       whatFamiliesNotice={[
-        "Belly swelling or a firm belly",
-        "Pain or discomfort",
-        "Changes in appetite or energy",
-        "Symptoms related to location (varies)",
+        "A lump or swelling in the abdomen, chest, or neck",
+        "Bone pain or limping",
+        "Fatigue or irritability",
+        "Loss of appetite or weight loss",
+        "Changes in bowel or bladder habits",
       ]}
       questionsToAsk={[
-        "Where is the tumor located and what does that mean for symptoms?",
-        "What tests do we need next to guide treatment?",
-        "What is the plan for the next few weeks?",
-        "What side effects should we watch for this week?",
-        "When should we call urgently and who do we call after hours?",
+        "Where is the tumor located?",
+        "What risk group does my child’s neuroblastoma fall into?",
+        "What tests were used to determine the stage?",
+        "What treatment options are recommended for this type?",
+        "Who should we contact if symptoms change?",
       ]}
     />
   );

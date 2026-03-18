@@ -1,39 +1,37 @@
-
-import { DiagnosisTemplate } from "./_diagnosis-template";
+import DiagnosisTemplate from "../../components/learn/DiagnosisTemplate";
 
 export default function EwingSarcomaPage() {
   return (
     <DiagnosisTemplate
       pageTitle="Ewing Sarcoma"
       diagnosisName="Ewing Sarcoma"
-      subtitle="A plain-language overview for caregivers (2–3 minute read)."
+      subtitle="A cancer that can affect bones or soft tissue"
       plainEnglish={[
-        "Ewing sarcoma is a cancer that usually starts in bone or nearby soft tissue.",
-        "It can cause pain or swelling in one area of the body.",
-        "Treatment often uses a combination of therapies (a ‘team approach’).",
-        "Your care team will tailor the plan to your child’s situation.",
+        "Ewing sarcoma is a type of cancer that most often starts in the bone, but it can also begin in soft tissues around the bone.",
+        "It commonly affects children and teenagers, especially during periods of rapid growth.",
+        "Ewing sarcoma can develop in different parts of the body, including the legs, pelvis, arms, chest, or spine.",
+        "Although it can be aggressive, many children respond well to treatment when it is diagnosed and treated promptly.",
       ]}
       whatYouMayHear={[
-        "Biopsy: confirms diagnosis",
-        "MRI/CT/PET: imaging to understand the tumor",
-        "Chemotherapy: common first step in treatment",
-        "Surgery: may remove the tumor when safe to do so",
-        "Radiation therapy: may be used depending on location",
-        "Port/central line: helps give treatment more safely",
+        "Bone or soft tissue tumor",
+        "Imaging scans (X‑ray, MRI, CT)",
+        "Biopsy",
+        "Chemotherapy",
+        "Radiation therapy",
       ]}
       whatFamiliesNotice={[
-        "Pain that doesn’t go away",
-        "Swelling or a noticeable lump",
-        "Trouble using an arm/leg normally",
-        "Fatigue or low energy",
-        "Fevers (sometimes)",
+        "Bone pain that may get worse over time",
+        "Swelling or a lump near a bone",
+        "Pain that may increase at night or with activity",
+        "Fever or fatigue",
+        "Difficulty moving the affected area",
       ]}
       questionsToAsk={[
-        "Where is the tumor and how will we treat it?",
-        "What does the next month look like (appointments, chemo, scans)?",
-        "What side effects should we expect this week?",
-        "What symptoms should prompt an urgent call?",
-        "Who do we contact after hours?",
+        "Where is the tumor located?",
+        "What tests were used to confirm the diagnosis?",
+        "What treatment options are recommended and why?",
+        "Will surgery or radiation be part of treatment?",
+        "Who should we contact if pain or symptoms suddenly worsen?",
       ]}
     />
   );
